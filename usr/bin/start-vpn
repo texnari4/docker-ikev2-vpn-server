@@ -24,8 +24,8 @@
 
 # https://wiki.strongswan.org/projects/strongswan/wiki/ForwardingAndSplitTunneling
 # Continue reading: https://wiki.strongswan.org/projects/strongswan/wiki/VirtualIP
-iptables -t nat -A POSTROUTING -s 10.8.0.0/16 -o eth0 -m policy --dir out --pol ipsec -j ACCEPT
-iptables -t nat -A POSTROUTING -s 10.8.0.0/16 -o eth0 -j MASQUERADE
+iptables -t nat -A POSTROUTING -s 10.10.10.0/24 -o eth0 -m policy --dir out --pol ipsec -j ACCEPT
+iptables -t nat -A POSTROUTING -s 10.10.10.0/24 -o eth0 -j MASQUERADE
 
 # hotfix for openssl `unable to write 'random state'` stderr
 SHARED_SECRET="123$(dd if=/dev/urandom count=1 bs=32 2>/dev/null | base64)"
