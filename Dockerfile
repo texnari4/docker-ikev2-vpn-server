@@ -1,7 +1,7 @@
-FROM alpine:3.15
+FROM alpine:3.17
 
-LABEL tags="alpine-3.15" \
-      build_ver="01-01-2022"
+LABEL tags="alpine-3.17" \
+      build_ver="13-02-2023"
 
 COPY etc /etc
 COPY usr/bin /usr/bin
