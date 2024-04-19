@@ -14,4 +14,8 @@ IKEv2 VPN Server based on Alpine image. Support OS clients - macOS, iOS, Linux, 
 
 #### 1.3 Start the IKEv2 VPN Server
 
-    docker run --cap-add=NET_ADMIN -d --name ikev2-vpn-server --restart=always -p 500:500/udp -p 4500:4500/udp docker-ikev2-vpn-server:alpine
+    docker run --cap-add=NET_ADMIN -d --name docker-ikev2-vpn-server --restart=always -p 500:500/udp -p 4500:4500/udp docker-ikev2-vpn-server:alpine
+
+#### 2 Generate the .mobileconfig to the current path
+
+    docker exec -it docker-ikev2-vpn-server generate-mobileconfig > ikev2-vpn.mobileconfig 
