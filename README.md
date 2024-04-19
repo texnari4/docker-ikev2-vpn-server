@@ -6,7 +6,8 @@ IKEv2 VPN Server based on Alpine image. Support OS clients - macOS, iOS, Linux, 
 
 #### 1.1 Clone this repository
 
-    git clone https://github.com/VictorBurtsev/ikev2-vpn-server-alpine.git && cd ikev2-vpn-server-alpine
+    git clone https://github.com/texnari4/docker-ikev2-vpn-server.git 
+    cd ikev2-vpn-server-alpine
 
 #### 1.2 Build docker image
 
